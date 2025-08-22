@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 const dolphine1Game = 85;
 const dolphine2Game = 54;
@@ -17,14 +17,14 @@ const koalasAvg = calcAvg(koalas1Game, koalas2Game, koalas3Game);
 
 const checkWinner = (dolphineAvg, koalasAvg) => {
     if (dolphineAvg > koalasAvg * 2) {
-        console.log(`Team Dolphine Wins Score- (${dolphineAvg} , ${koalasAvg})`);
+        return `Team Dolphine Wins Score- (Dolphine - ${dolphineAvg} , ${koalasAvg})`;
     }
     else if (koalasAvg > dolphineAvg * 2) {
-        console.log(`Team Koalas Wins Score- (${koalasAvg} , ${dolphineAvg})`);
+        return `Team Koalas Wins Score- (${koalasAvg} , ${dolphineAvg})`;
     }
     else {
-        console.log("No one Wins");
+        return "No one Wins";
     }
 }
 
-checkWinner(dolphineAvg, koalasAvg);
+console.log(checkWinner(dolphineAvg, koalasAvg));
